@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Footprint Timer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>AI Footprint Timer</h1>
+      <p class="muted">Tracks active use of AI websites and estimates environmental impact.</p>
+
+      <section>
+        <h2>Current session</h2>
+        <div class="metric-row"><span>Site</span><strong id="sessionSite">Not active</strong></div>
+        <div class="metric-row"><span>Duration</span><strong id="sessionDuration">0s</strong></div>
+      </section>
+
+      <section>
+        <h2>Cumulative total</h2>
+        <div class="metric-row"><span>Time</span><strong id="totalDuration">0s</strong></div>
+      </section>
+
+      <section>
+        <h2>Estimated impact</h2>
+        <div class="metric-row"><span>CO₂</span><strong id="co2Value">0 g</strong></div>
+        <div class="metric-row"><span>Water</span><strong id="waterValue">0 ml</strong></div>
+        <div class="metric-row"><span>Energy</span><strong id="energyValue">0 Wh</strong></div>
+      </section>
+
+      <details>
+        <summary>Per-site totals</summary>
+        <ul id="siteList"></ul>
+      </details>
+
+      <button id="resetButton">Reset totals</button>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
