@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "AI Footprint Timer",
+  "description": "Tracks active time spent on AI websites and estimates environmental impact.",
+  "version": "0.1.0",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": [
+    "*://chat.openai.com/*",
+    "*://chatgpt.com/*",
+    "*://claude.ai/*",
+    "*://grok.com/*",
+    "*://x.com/i/grok*",
+    "*://poe.com/*",
+    "*://gemini.google.com/*",
+    "*://copilot.microsoft.com/*",
+    "*://perplexity.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Footprint Timer"
+  }
+}
